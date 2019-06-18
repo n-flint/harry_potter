@@ -10,7 +10,9 @@ RSpec.describe 'as a user on the root path' do
     # And I click on "Get Students"
     click_button 'Get Students'
     # Then my path should be "/search" with "house=slytherin" in the parameters
-    expect(current_url).to eq('/search')
+    # What exactly should I be testing here?
+    expect(current_url).to eq('http://www.example.com/search?utf8=%E2%9C%93&house=Slytherin&commit=Get+Students')
+    expect(current_path).to eq('/search')
     # And I should see a message "22 Students"
     expect(page).to have_content('22 Students')
     # And I should see a list of the 22 members of Slytherin
