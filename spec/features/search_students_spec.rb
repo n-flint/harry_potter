@@ -20,8 +20,8 @@ RSpec.describe 'as a user on the root path' do
       expect(page).to have_css('.student', count: 22)
       # And I should see a name and id for each student.
       within first '.student' do
-        expect(page).to have_css('.id')     
-        expect(page).to have_css('.name')       
+        expect(page).to have_content('Name:')     
+        expect(page).to have_content('Id:')       
       end
     end
   end
